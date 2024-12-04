@@ -23,7 +23,7 @@ function App() {
 
   return (
     <>
-    <Router>
+    <Router basename="/habot-assignment">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} /> {/* Use element instead of component */}
