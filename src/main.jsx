@@ -4,9 +4,12 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css'
 import App from './App.jsx'
 
+const isGitHubPages = process.env.NODE_ENV === 'production'; // Check environment
+const basename = isGitHubPages ? '/habot-assignment' : ''; // Use basename only on production
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/habot-assignment">
+    <BrowserRouter basename={basename}>
       <App />
     </BrowserRouter>
   </StrictMode>,
